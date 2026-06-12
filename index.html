@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio pribadi Kartika Devi Lestari, mahasiswi Komputerisasi Akuntansi Politeknik LP3I Pekanbaru dengan fokus akuntansi, administrasi, dan pengolahan data."
+    />
+    <meta
+      name="keywords"
+      content="Kartika Devi Lestari, portfolio, akuntansi, administrasi, mahasiswa, Politeknik LP3I Pekanbaru"
+    />
+    <meta name="theme-color" content="#b63d76" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kartika Devi Lestari | Personal Portfolio" />
+    <meta
+      property="og:description"
+      content="Website portofolio pribadi yang modern, profesional, responsif, dan mudah diperbarui."
+    />
+    <meta property="og:image" content="assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kartika Devi Lestari | Personal Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio pribadi untuk kebutuhan magang, kerja, dan pengembangan karier."
+    />
+    <meta name="twitter:image" content="assets/og-image.svg" />
+    <script>
+      (function () {
+        try {
+          var theme = new URLSearchParams(window.location.search).get("theme");
+          if (theme !== "dark" && theme !== "light") {
+            theme = localStorage.getItem("kartika-portfolio-theme");
+          }
+          if (!theme) {
+            theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          }
+          document.documentElement.dataset.theme = theme;
+        } catch (error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Kartika Devi Lestari | Personal Portfolio</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kartika Devi Lestari",
+        "jobTitle": "Accounting Student & Administration Enthusiast",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Politeknik LP3I Pekanbaru"
+        },
+        "description": "Mahasiswi Komputerisasi Akuntansi dengan minat pada akuntansi, administrasi, pengolahan data, dan teknologi informasi."
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Langsung ke konten utama</a>
+
+    <header class="site-header" id="top">
+      <div class="container site-header__inner">
+        <a class="brand" href="#home" aria-label="Kartika Devi Lestari">
+          <span class="brand__mark">KDL</span>
+          <span class="brand__text">
+            <strong>Kartika Devi Lestari</strong>
+            <small>Personal Portfolio</small>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Buka navigasi"
+        >
+          <span class="nav-toggle__icon" aria-hidden="true">☰</span>
+          <span class="nav-toggle__label">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama">
+          <a class="site-nav__link" href="#home">Home</a>
+          <a class="site-nav__link" href="#tentang">Tentang Saya</a>
+          <a class="site-nav__link" href="#pendidikan">Pendidikan</a>
+          <a class="site-nav__link" href="#pengalaman">Pengalaman</a>
+          <a class="site-nav__link" href="#keahlian">Keahlian</a>
+          <a class="site-nav__link" href="#sertifikat">Sertifikat</a>
+          <a class="site-nav__link" href="#kontak">Kontak</a>
+          <button class="theme-toggle" type="button" aria-label="Ganti mode tema">
+            <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀</span>
+            <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">☾</span>
+            <span class="theme-toggle__label">Tema</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section section--spaced" id="home">
+        <div class="container hero__grid">
+          <div class="hero__copy reveal">
+            <p class="eyebrow">Portfolio Pribadi</p>
+            <h1>Kartika Devi Lestari</h1>
+            <p class="hero__role">Accounting Student & Administration Enthusiast</p>
+            <p class="hero__lead">
+              Saya adalah mahasiswi Program Studi Komputerisasi Akuntansi Politeknik LP3I
+              Pekanbaru yang memiliki minat dalam akuntansi, administrasi, pengolahan data, dan
+              teknologi informasi.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="assets/Kartika-Devi-Lestari-CV.pdf" download>
+                Download CV
+              </a>
+              <a class="btn btn--ghost" href="#kontak">Hubungi Saya</a>
+            </div>
+
+            <div class="hero__stats" aria-label="Ringkasan cepat">
+              <article class="stat-card">
+                <strong>2</strong>
+                <span>Jenjang pendidikan</span>
+              </article>
+              <article class="stat-card">
+                <strong>3</strong>
+                <span>Pengalaman organisasi</span>
+              </article>
+              <article class="stat-card">
+                <strong>10</strong>
+                <span>Keahlian utama</span>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero__visual reveal" aria-label="Foto profil Kartika Devi Lestari">
+            <div class="profile-card">
+              <div class="profile-card__glow" aria-hidden="true"></div>
+              <img
+                class="profile-card__image"
+                src="assets/profile-photo.png"
+                alt="Foto profil Kartika Devi Lestari"
+                loading="eager"
+                fetchpriority="high"
+              />
+              <div class="profile-card__body">
+                <p class="profile-card__eyebrow">Politeknik LP3I Pekanbaru</p>
+                <h2>Kartika Devi Lestari</h2>
+                <p>Siap berkembang di bidang akuntansi, administrasi, dan data.</p>
+              </div>
+            </div>
+            <div class="floating-note">
+              <span>Fokus Utama</span>
+              <strong>Administrasi, Akuntansi, dan Komunikasi</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="tentang">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Tentang Saya</p>
+            <h2>Profil yang ringkas, jelas, dan profesional.</h2>
+            <p>
+              Portofolio ini dirancang untuk menampilkan identitas, kemampuan, dan pengalaman
+              Kartika Devi Lestari dengan struktur yang mudah dipahami oleh perekrut, dosen, maupun
+              mitra profesional.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="info-card reveal">
+              <h3>Deskripsi singkat</h3>
+              <p>
+                Saya aktif dalam organisasi kampus maupun sekolah sehingga terbiasa bekerja sama,
+                berkomunikasi dengan baik, menjaga administrasi, dan menyelesaikan tugas secara
+                tertata. Saya juga memiliki ketertarikan pada penggunaan teknologi untuk mendukung
+                pengolahan data dan pekerjaan perkantoran.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>Pendidikan</h3>
+              <p>
+                Saat ini menempuh studi di Politeknik LP3I Pekanbaru pada Program Studi
+                Komputerisasi Akuntansi setelah menamatkan pendidikan menengah di SMA Negeri 1
+                Kampar Kiri Hilir.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <h3>Tujuan karier</h3>
+              <p>
+                Mengembangkan karier di bidang akuntansi, administrasi, dan pengolahan data,
+                sekaligus membangun kebiasaan kerja yang rapi, adaptif, dan siap mendukung
+                kebutuhan organisasi atau perusahaan.
+              </p>
+            </article>
+
+            <article class="info-card info-card--accent reveal">
+              <h3>Keahlian utama</h3>
+              <div class="chips">
+                <span>Komunikasi</span>
+                <span>Administrasi</span>
+                <span>Akuntansi Dasar</span>
+                <span>Pengolahan Data</span>
+                <span>Leadership</span>
+                <span>Teamwork</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="pendidikan">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Pendidikan</p>
+            <h2>Perjalanan akademik yang membangun dasar profesional.</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-item__marker" aria-hidden="true"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__header">
+                  <h3>SMA Negeri 1 Kampar Kiri Hilir</h3>
+                  <span>2022 - 2025</span>
+                </div>
+                <p>
+                  Menempuh pendidikan menengah dengan fokus membangun disiplin, dasar akademik,
+                  dan kesiapan untuk aktif dalam kegiatan sekolah.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-item__marker" aria-hidden="true"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__header">
+                  <h3>Politeknik LP3I Pekanbaru</h3>
+                  <span>2025 - Sekarang</span>
+                </div>
+                <p>
+                  Program Studi Komputerisasi Akuntansi yang mendukung pengembangan kemampuan
+                  akuntansi, administrasi, pengolahan data, dan pemanfaatan teknologi informasi.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pengalaman">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Pengalaman Organisasi</p>
+            <h2>Aktif berorganisasi untuk mengasah tanggung jawab dan kepemimpinan.</h2>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-card reveal">
+              <p class="experience-card__tag">Kampus</p>
+              <h3>Sekretaris BEM Politeknik LP3I Pekanbaru</h3>
+              <div class="experience-card__block">
+                <h4>Tugas</h4>
+                <p>
+                  Mengelola surat menyurat, notulensi rapat, agenda kegiatan, dan arsip administrasi
+                  organisasi agar tetap rapi dan mudah ditelusuri.
+                </p>
+              </div>
+              <div class="experience-card__block">
+                <h4>Pencapaian</h4>
+                <p>
+                  Membantu proses koordinasi internal berjalan lebih tertata dan mendukung
+                  dokumentasi kegiatan yang konsisten.
+                </p>
+              </div>
+            </article>
+
+            <article class="experience-card reveal">
+              <p class="experience-card__tag">Sekolah</p>
+              <h3>Anggota OSIS Bidang Prestasi Akademik, Seni, dan Olahraga</h3>
+              <div class="experience-card__block">
+                <h4>Tugas</h4>
+                <p>
+                  Mendukung pelaksanaan program bidang prestasi, membantu koordinasi acara, serta
+                  ikut menjaga komunikasi yang baik antaranggota dan peserta kegiatan.
+                </p>
+              </div>
+              <div class="experience-card__block">
+                <h4>Pencapaian</h4>
+                <p>
+                  Terlibat dalam kegiatan yang mendorong partisipasi siswa dan memperkuat
+                  kemampuan kerja sama tim.
+                </p>
+              </div>
+            </article>
+
+            <article class="experience-card reveal">
+              <p class="experience-card__tag">Kecamatan</p>
+              <h3>Peserta Pramuka Tingkat Kecamatan</h3>
+              <div class="experience-card__block">
+                <h4>Tugas</h4>
+                <p>
+                  Mengikuti rangkaian pembinaan pramuka yang menekankan kedisiplinan, kemandirian,
+                  kepemimpinan, dan kerja sama kelompok.
+                </p>
+              </div>
+              <div class="experience-card__block">
+                <h4>Pencapaian</h4>
+                <p>
+                  Menguatkan karakter tangguh, kemampuan adaptasi, dan komunikasi yang efektif dalam
+                  berbagai aktivitas lapangan.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="keahlian">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Keahlian</p>
+            <h2>Disusun dalam bentuk progress bar agar mudah dibaca.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-panel reveal">
+              <h3>Office Tools</h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Microsoft Word</span>
+                    <span>95%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 95%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Microsoft Excel</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 90%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Microsoft PowerPoint</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 92%"></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-panel reveal">
+              <h3>Administrasi & Data</h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Administrasi Perkantoran</span>
+                    <span>93%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 93%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Akuntansi Dasar</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 85%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Pengolahan Data</span>
+                    <span>88%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 88%"></span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-panel reveal">
+              <h3>Soft Skills</h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Public Speaking</span>
+                    <span>84%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 84%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Leadership</span>
+                    <span>86%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 86%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Teamwork</span>
+                    <span>94%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 94%"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item__head">
+                    <span>Time Management</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="skill-item__bar"><span style="width: 92%"></span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sertifikat">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Sertifikat</p>
+            <h2>Galeri sertifikat placeholder yang bisa diganti kapan saja.</h2>
+            <p>
+              Klik gambar untuk memperbesar. Struktur ini sengaja dibuat sederhana agar mudah
+              diperbarui ketika file sertifikat asli sudah siap.
+            </p>
+          </div>
+
+          <div class="certificate-grid">
+            <button
+              class="certificate-card reveal"
+              type="button"
+              data-title="Sertifikat Placeholder 01"
+              data-caption="Klik untuk memperbesar sertifikat placeholder."
+              data-image="assets/certificate-placeholder.svg"
+            >
+              <span class="certificate-card__badge">01</span>
+              <img src="assets/certificate-placeholder.svg" alt="Placeholder sertifikat 01" />
+              <span class="certificate-card__footer">Sertifikat Placeholder 01</span>
+            </button>
+
+            <button
+              class="certificate-card reveal"
+              type="button"
+              data-title="Sertifikat Placeholder 02"
+              data-caption="Klik untuk memperbesar sertifikat placeholder."
+              data-image="assets/certificate-placeholder.svg"
+            >
+              <span class="certificate-card__badge">02</span>
+              <img src="assets/certificate-placeholder.svg" alt="Placeholder sertifikat 02" />
+              <span class="certificate-card__footer">Sertifikat Placeholder 02</span>
+            </button>
+
+            <button
+              class="certificate-card reveal"
+              type="button"
+              data-title="Sertifikat Placeholder 03"
+              data-caption="Klik untuk memperbesar sertifikat placeholder."
+              data-image="assets/certificate-placeholder.svg"
+            >
+              <span class="certificate-card__badge">03</span>
+              <img src="assets/certificate-placeholder.svg" alt="Placeholder sertifikat 03" />
+              <span class="certificate-card__footer">Sertifikat Placeholder 03</span>
+            </button>
+
+            <button
+              class="certificate-card reveal"
+              type="button"
+              data-title="Sertifikat Placeholder 04"
+              data-caption="Klik untuk memperbesar sertifikat placeholder."
+              data-image="assets/certificate-placeholder.svg"
+            >
+              <span class="certificate-card__badge">04</span>
+              <img src="assets/certificate-placeholder.svg" alt="Placeholder sertifikat 04" />
+              <span class="certificate-card__footer">Sertifikat Placeholder 04</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="kontak">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Kontak</p>
+            <h2>Siap terhubung untuk magang, kerja, maupun kolaborasi profesional.</h2>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-card reveal" href="mailto:kartika.devi.lestari@example.com">
+              <span class="contact-card__icon" aria-hidden="true">✉</span>
+              <div>
+                <h3>Email</h3>
+                <p>kartika.devi.lestari@example.com</p>
+              </div>
+            </a>
+
+            <a class="contact-card reveal" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">
+              <span class="contact-card__icon" aria-hidden="true">WA</span>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>+62 812-3456-7890</p>
+              </div>
+            </a>
+
+            <a class="contact-card reveal" href="https://instagram.com/kartikadev" target="_blank" rel="noreferrer">
+              <span class="contact-card__icon" aria-hidden="true">IG</span>
+              <div>
+                <h3>Instagram</h3>
+                <p>@kartikadev</p>
+              </div>
+            </a>
+
+            <a class="contact-card reveal" href="https://linkedin.com/in/kartikadevilestari" target="_blank" rel="noreferrer">
+              <span class="contact-card__icon" aria-hidden="true">in</span>
+              <div>
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/in/kartikadevilestari</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>© <span id="current-year"></span> Kartika Devi Lestari. All rights reserved.</p>
+        <a href="#home">Kembali ke atas</a>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Kembali ke atas">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <div class="modal" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="certificate-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Tutup pratinjau">
+          ×
+        </button>
+        <img class="modal__image" src="" alt="" />
+        <div class="modal__copy">
+          <p class="eyebrow">Sertifikat</p>
+          <h3 id="certificate-title"></h3>
+          <p id="certificate-caption"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

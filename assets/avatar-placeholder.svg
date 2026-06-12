@@ -1,0 +1,43 @@
+<svg width="900" height="1125" viewBox="0 0 900 1125" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="150" y1="100" x2="760" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B63D76"/>
+      <stop offset="0.52" stop-color="#D45B8D"/>
+      <stop offset="1" stop-color="#F39BC3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="240" y1="240" x2="710" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8FC" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#FFD8EA" stop-opacity="0.54"/>
+    </linearGradient>
+    <filter id="shadow" x="110" y="120" width="680" height="920" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="34" stdDeviation="42" flood-color="#B63D76" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1125" rx="64" fill="url(#bg)"/>
+  <circle cx="126" cy="160" r="88" fill="#FFFFFF" fill-opacity="0.1"/>
+  <circle cx="760" cy="156" r="140" fill="#FFFFFF" fill-opacity="0.08"/>
+  <circle cx="792" cy="808" r="164" fill="#FFFFFF" fill-opacity="0.08"/>
+  <path d="M-48 906C132 810 244 872 404 940C565 1007 682 1038 942 942V1125H-48V906Z" fill="#FFFFFF" fill-opacity="0.08"/>
+
+  <g filter="url(#shadow)">
+    <rect x="130" y="115" width="640" height="895" rx="44" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  </g>
+
+  <ellipse cx="450" cy="405" rx="162" ry="162" fill="url(#accent)" fill-opacity="0.9"/>
+  <ellipse cx="450" cy="420" rx="116" ry="116" fill="#FFF7FB" fill-opacity="0.96"/>
+  <path d="M362 454C392 413 422 394 450 394C478 394 508 413 538 454C557 478 571 511 578 552H322C329 511 343 478 362 454Z" fill="#6E1F44" fill-opacity="0.22"/>
+  <path d="M398 346C398 315 425 290 456 290H459C490 290 516 315 516 346V360C516 383 507 406 492 423C477 441 458 449 449 449C439 449 420 441 406 423C392 406 383 383 383 360V354C383 349 388 346 398 346Z" fill="#6E1F44" fill-opacity="0.92"/>
+  <path d="M350 572C356 508 396 469 450 469C504 469 544 508 550 572L557 643H343L350 572Z" fill="#6E1F44" fill-opacity="0.92"/>
+
+  <rect x="210" y="722" width="480" height="156" rx="30" fill="#FFFFFF" fill-opacity="0.18" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <text x="450" y="782" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="36" font-weight="800" letter-spacing="3">K D L</text>
+  <text x="450" y="832" text-anchor="middle" fill="#FFEAF4" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">Kartika Devi Lestari</text>
+  <text x="450" y="874" text-anchor="middle" fill="#FFE4F0" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="500">Accounting Student &amp; Administration Enthusiast</text>
+
+  <g opacity="0.9">
+    <rect x="160" y="80" width="136" height="10" rx="5" fill="#F39BC3"/>
+    <rect x="320" y="80" width="220" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.34"/>
+    <rect x="564" y="80" width="176" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.22"/>
+  </g>
+</svg>

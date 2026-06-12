@@ -1,0 +1,48 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frame" x1="90" y1="120" x2="1110" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B63D76"/>
+      <stop offset="0.55" stop-color="#D45B8D"/>
+      <stop offset="1" stop-color="#F39BC3"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="210" y1="180" x2="980" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF5FA"/>
+    </linearGradient>
+    <filter id="shadow" x="120" y="110" width="960" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#B63D76" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" rx="56" fill="#FFF7FB"/>
+  <path d="M0 144C156 78 292 112 432 178C583 248 710 286 856 240C981 201 1083 102 1200 92V0H0V144Z" fill="#FFE3F0"/>
+  <path d="M0 900H1200V760C1087 790 996 842 850 810C699 776 610 686 458 662C300 637 171 704 0 740V900Z" fill="#FFD8EA"/>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="128" width="960" height="644" rx="34" fill="url(#paper)" stroke="url(#frame)" stroke-width="10"/>
+  </g>
+
+  <rect x="170" y="180" width="860" height="540" rx="26" fill="none" stroke="#F39BC3" stroke-opacity="0.32" stroke-width="3" stroke-dasharray="10 14"/>
+  <rect x="210" y="220" width="780" height="58" rx="16" fill="#B63D76"/>
+  <text x="600" y="260" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="2">SERTIFIKAT PLACEHOLDER</text>
+
+  <circle cx="272" cy="380" r="58" fill="#B63D76"/>
+  <circle cx="272" cy="380" r="40" fill="#F39BC3" fill-opacity="0.95"/>
+  <path d="M252 380L267 395L295 364" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="366" y="350" width="470" height="28" rx="14" fill="#FFD7E9"/>
+  <rect x="366" y="400" width="374" height="18" rx="9" fill="#FFE8F1"/>
+  <rect x="366" y="432" width="430" height="18" rx="9" fill="#FFE8F1"/>
+  <rect x="366" y="464" width="346" height="18" rx="9" fill="#FFE8F1"/>
+  <rect x="366" y="530" width="220" height="50" rx="18" fill="#D45B8D"/>
+  <text x="476" y="563" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="800">Klik untuk memperbesar</text>
+
+  <rect x="210" y="620" width="780" height="1" fill="#F2C8DA"/>
+  <text x="600" y="662" text-anchor="middle" fill="#7D6471" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Ganti dengan sertifikat asli saat file sudah tersedia</text>
+
+  <g opacity="0.6">
+    <circle cx="910" cy="374" r="82" fill="#F39BC3" fill-opacity="0.12"/>
+    <circle cx="964" cy="430" r="48" fill="#B63D76" fill-opacity="0.08"/>
+    <circle cx="260" cy="624" r="56" fill="#B63D76" fill-opacity="0.08"/>
+  </g>
+</svg>
