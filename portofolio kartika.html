@@ -1,0 +1,1277 @@
+﻿<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171914">
+  <meta name="description"
+    content="Portofolio Kartika Devi Lestari — mahasiswa Komputerisasi Akuntansi, administrasi, dan organisasi.">
+  <title>Kartika Devi Lestari — Accounting & Administration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #4a3b3c;
+      --paper: #fdf0f4;
+      --white: #ffffff;
+      --muted: #a48c90;
+      --line: rgba(74, 59, 60, .17);
+      --lime: #ffb6c1;
+      --lime-dark: #f0809b;
+      --mono: "DM Mono", monospace;
+      --sans: "DM Sans", sans-serif;
+      --serif: "Playfair Display", Georgia, serif;
+      --page-width: 1240px;
+    }
+    @keyframes goyangFoto {
+      0% { transform: rotate(3deg) translateY(0px); }
+      25% { transform: rotate(5deg) translateY(-10px); }
+      50% { transform: rotate(2deg) translateY(-15px); }
+      75% { transform: rotate(0deg) translateY(-5px); }
+      100% { transform: rotate(3deg) translateY(0px); }
+    }
+    [data-theme="dark"] {
+      --ink: #fdf0f4;
+      --paper: #2b1f21;
+      --white: #1f1416;
+      --muted: #bdaeb1;
+      --line: rgba(253, 240, 244, .17);
+    }
+
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, transform 0.2s ease;
+      padding: 0;
+    }
+    .theme-toggle:hover {
+      background: var(--line);
+      transform: scale(1.05);
+    }
+    
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .stat, .edu-side, .skill-card, .contact-box {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(var(--page-width), calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    .mono {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    /* Navigasi */
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -.03em;
+    }
+
+    .brand-mark {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      background: var(--lime);
+      border-radius: 50%;
+      font-family: var(--serif);
+      font-size: 16px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #736163;
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    .nav-cta {
+      padding: 11px 16px;
+      background: var(--ink);
+      color: var(--white) !important;
+      border-radius: 3px;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 665px;
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      align-items: center;
+      gap: 36px;
+      padding-block: 66px 82px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 23px;
+      color: var(--muted);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      background: #f0809b;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(240, 128, 155, .13);
+    }
+
+    h1 {
+      max-width: 740px;
+      margin: 0;
+      font-size: clamp(54px, 8vw, 106px);
+      line-height: .93;
+      letter-spacing: -.085em;
+      font-weight: 600;
+    }
+
+    h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1.4px var(--ink);
+    }
+
+    .hero-desc {
+      max-width: 510px;
+      margin: 29px 0 0;
+      color: #756367;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 30px;
+    }
+
+    .button {
+      min-height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .button-dark:hover {
+      background: #5c484a;
+    }
+
+    .button-light:hover {
+      background: var(--lime);
+    }
+
+    .arrow {
+      font-size: 16px;
+    }
+
+    .hero-art {
+      min-height: 480px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-art::before {
+      content: "";
+      width: min(390px, 86%);
+      aspect-ratio: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-43%, -50%);
+      background: var(--lime);
+      border-radius: 50%;
+    }
+
+    .portrait-frame {
+      width: min(305px, 70%);
+      height: 410px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      background: #f2e6e8;
+      border: 9px solid var(--white);
+      box-shadow: 15px 18px 0 var(--ink);
+      animation: goyangFoto 4s ease-in-out infinite;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center 25%;
+      filter: saturate(.78);
+    }
+
+    .portrait-placeholder {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(145deg, rgba(74, 59, 60, .1), transparent 65%),
+        #ebdbe0;
+      color: #948487;
+      font-family: var(--serif);
+      font-size: 88px;
+    }
+
+    .photo-note {
+      width: 175px;
+      position: absolute;
+      right: -2px;
+      bottom: 36px;
+      z-index: 2;
+      padding: 15px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+      transform: rotate(-3deg);
+    }
+
+    .photo-note strong {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--serif);
+      font-size: 19px;
+    }
+
+    .photo-note .mono {
+      color: var(--muted);
+    }
+
+    .vertical-note {
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: var(--muted);
+    }
+
+    /* Running strip */
+    .ticker {
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--lime);
+    }
+
+    .ticker-track {
+      width: max-content;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      padding: 15px 0;
+      animation: slide 28s linear infinite;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 28px;
+      white-space: nowrap;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .ticker-item::after {
+      content: "\f069"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+      font-size: 15px;
+    }
+
+    @keyframes slide {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Section umum */
+    section {
+      scroll-margin-top: 28px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 35px;
+    }
+
+    .section-index {
+      color: var(--muted);
+    }
+
+    .section-title {
+      max-width: 690px;
+      margin: 9px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(35px, 5vw, 59px);
+      line-height: 1.06;
+      font-weight: 500;
+      letter-spacing: -.04em;
+    }
+
+    .section-intro {
+      max-width: 430px;
+      margin: 0 0 4px;
+      color: #827275;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Tentang dan statistik */
+    .about {
+      padding-block: 102px 100px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-copy {
+      padding-top: 13px;
+      font-size: 18px;
+      line-height: 1.85;
+      letter-spacing: -.02em;
+    }
+
+    .about-copy p {
+      margin: 0 0 20px;
+    }
+
+    .about-copy .highlight {
+      background: linear-gradient(transparent 58%, var(--lime) 58%);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .stat {
+      min-height: 145px;
+      padding: 20px;
+      background: var(--paper);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 12px;
+      font-family: var(--serif);
+      font-size: 47px;
+      font-weight: 500;
+      letter-spacing: -.06em;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .education {
+      padding-block: 86px 91px;
+      background: var(--white);
+    }
+
+    .edu-layout {
+      display: grid;
+      grid-template-columns: .68fr 1.32fr;
+      gap: 56px;
+    }
+
+    .edu-side {
+      padding: 20px;
+      align-self: start;
+      background: var(--lime);
+    }
+
+    .edu-side .big-number {
+      display: block;
+      margin: 22px 0 9px;
+      font-family: var(--serif);
+      font-size: 70px;
+      letter-spacing: -.08em;
+    }
+
+    .edu-side p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .edu-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .edu-item {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      gap: 25px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .edu-date {
+      padding-top: 5px;
+      color: var(--muted);
+    }
+
+    .edu-item h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      letter-spacing: -.03em;
+    }
+
+    .edu-item .degree {
+      margin: 0 0 8px;
+      color: #827275;
+      font-size: 13px;
+    }
+
+    .edu-item p:last-child {
+      max-width: 550px;
+      margin: 0;
+      color: #756367;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    /* Pengalaman */
+    .experience {
+      padding-block: 98px 100px;
+    }
+
+    .timeline {
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr 35px;
+      gap: 25px;
+      padding: 29px 0 31px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-date {
+      padding-top: 4px;
+      color: var(--muted);
+    }
+
+    .timeline-content h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: -.025em;
+    }
+
+    .timeline-place {
+      margin: 7px 0 14px;
+      color: #857578;
+      font-size: 12px;
+    }
+
+    .timeline-content ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline-content li {
+      display: flex;
+      gap: 9px;
+      color: #756367;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .timeline-content li::before {
+      content: "\f054"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 11px;
+      color: #f0809b;
+      flex: 0 0 auto;
+    }
+
+    .timeline-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      font-size: 13px;
+    }
+
+    /* Keahlian */
+    .skills {
+      padding-block: 82px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .skills .section-index,
+    .skills .section-intro {
+      color: #bcaeb1;
+    }
+
+    .skills .section-title {
+      color: var(--white);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      background: rgba(255, 255, 255, .17);
+    }
+
+    .skill-card {
+      min-height: 210px;
+      padding: 24px;
+      background: var(--ink);
+    }
+
+    .skill-num {
+      color: var(--lime);
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .skill-card h3 {
+      margin: 36px 0 12px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .skill-card p {
+      max-width: 300px;
+      margin: 0;
+      color: #bcaeb1;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border: 1px solid rgba(255, 255, 255, .23);
+      border-radius: 2px;
+      color: #f5eaec;
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    /* Closing */
+    .contact {
+      padding-block: 94px 55px;
+    }
+
+    .contact-box {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 68px);
+      background: var(--lime);
+    }
+
+    .contact-box::after {
+      content: "K";
+      position: absolute;
+      right: 16px;
+      bottom: -132px;
+      color: rgba(74, 59, 60, .08);
+      font-family: var(--serif);
+      font-size: 360px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .contact-box h2 {
+      max-width: 710px;
+      position: relative;
+      z-index: 1;
+      margin: 17px 0 16px;
+      font-family: var(--serif);
+      font-size: clamp(39px, 6.5vw, 78px);
+      line-height: 1.02;
+      font-weight: 500;
+      letter-spacing: -.06em;
+    }
+
+    .contact-box p {
+      max-width: 460px;
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #7a6669;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      position: relative;
+      z-index: 1;
+      margin-top: 25px;
+    }
+
+    .contact-links .button {
+      border-color: var(--ink);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 0 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .04em;
+    }
+
+    /* Reveal saat scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: min(100% - 36px, var(--page-width));
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-block: 64px 55px;
+      }
+
+      h1 {
+        font-size: clamp(56px, 15vw, 88px);
+      }
+
+      .hero-art {
+        min-height: 390px;
+        order: -1;
+      }
+
+      .portrait-frame {
+        width: 240px;
+        height: 320px;
+      }
+
+      .hero-art::before {
+        width: 290px;
+      }
+
+      .photo-note {
+        right: 3%;
+        bottom: 28px;
+      }
+
+      .vertical-note {
+        left: 4%;
+      }
+
+      .section-head,
+      .about-grid,
+      .edu-layout {
+        grid-template-columns: 1fr;
+        gap: 23px;
+      }
+
+      .about {
+        padding-block: 72px;
+      }
+
+      .education,
+      .experience {
+        padding-block: 72px;
+      }
+
+      .about-copy {
+        font-size: 16px;
+      }
+
+      .edu-side {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 6px 20px;
+        align-items: center;
+      }
+
+      .edu-side .big-number {
+        grid-row: span 2;
+        margin: 0;
+        font-size: 58px;
+      }
+
+      .edu-item {
+        grid-template-columns: 1fr;
+        gap: 9px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr 30px;
+        gap: 12px;
+      }
+
+      .timeline-date {
+        grid-column: 1 / -1;
+      }
+
+      .timeline-mark {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .timeline-content {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .timeline-content ul {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        padding-block: 70px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-card {
+        min-height: 175px;
+      }
+
+      .skill-card h3 {
+        margin-top: 24px;
+      }
+
+      .contact {
+        padding-top: 70px;
+      }
+
+      .contact-box::after {
+        right: -50px;
+        font-size: 250px;
+      }
+
+      .footer {
+        flex-direction: column;
+        line-height: 1.6;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home" aria-label="Kembali ke halaman utama">
+      <span class="brand-mark">K</span>
+      <span>KARTIKA DEVI LESTARI</span>
+    </a>
+
+        <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+      <a class="nav-cta" href="#kontak">Hubungi saya ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow mono">
+          <span class="status-dot"></span>
+          Terbuka untuk kesempatan kerja & magang
+        </div>
+
+        <h1>Kartika Devi <span>Lestari.</span></h1>
+
+        <p class="hero-desc">
+          Mahasiswi Komputerisasi Akuntansi yang menyukai pekerjaan
+          terstruktur—dari mengolah data keuangan hingga memastikan administrasi
+          berjalan rapi dan terkoordinasi.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-dark" href="#pengalaman">
+            Lihat perjalanan saya <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+          <a class="button button-light" href="mailto:lestarikartika018@gmail.com">
+            Kirim email <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Foto profil Kartika">
+        <span class="vertical-note mono">PEKANBARU · RIAU · INDONESIA</span>
+
+        <div class="portrait-frame">
+          <img src="kartika.png" alt="Foto profil Kartika Devi Lestari"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="portrait-placeholder" style="display:none" aria-hidden="true">K.</div>
+        </div>
+
+        <div class="photo-note">
+          <span class="mono">Fokus saat ini</span>
+          <strong>Accounting<br>& Administration</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Accounting student</span>
+        <span class="ticker-item">Administration enthusiast</span>
+        <span class="ticker-item">Organizational leader</span>
+        <span class="ticker-item">Detail-oriented</span>
+        <span class="ticker-item">Accounting student</span>
+        <span class="ticker-item">Administration enthusiast</span>
+        <span class="ticker-item">Organizational leader</span>
+        <span class="ticker-item">Detail-oriented</span>
+      </div>
+    </div>
+
+    <section class="wrap about" id="tentang">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-index mono">01 / PROFIL</div>
+          <h2 class="section-title">Teliti dalam angka.<br>Teratur dalam kerja.</h2>
+        </div>
+        <p class="section-intro">
+          Saya menggabungkan dasar akuntansi dengan pengalaman organisasi:
+          terbiasa mengurus dokumen, menyusun laporan, dan membantu tim tetap
+          berjalan terarah.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            Saat ini saya menempuh studi <span class="highlight">Komputerisasi
+              Akuntansi di Politeknik LP3I Pekanbaru</span>. Saya tertarik pada
+            akuntansi, pengolahan data, perpajakan, dan administrasi organisasi.
+          </p>
+          <p>
+            Pengalaman sebagai sekretaris BEM mengasah kebiasaan saya dalam
+            menata dokumen, mencatat hasil rapat, mengatur jadwal, dan menjaga
+            komunikasi antaranggota. Saya bekerja dengan teliti, disiplin, dan
+            terbuka untuk terus belajar.
+          </p>
+        </div>
+
+        <div class="stats reveal" aria-label="Ringkasan profil">
+          <div class="stat">
+            <strong>3.54</strong>
+            <span>IP semester 2<br>Komputerisasi Akuntansi</span>
+          </div>
+          <div class="stat">
+            <strong>02</strong>
+            <span>Semester hasil studi<br>yang tercantum</span>
+          </div>
+          <div class="stat">
+            <strong>03+</strong>
+            <span>Pengalaman organisasi<br>dan kegiatan</span>
+          </div>
+          <div class="stat">
+            <strong>ID</strong>
+            <span>Bahasa Indonesia<br>— native</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education" id="pendidikan">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-index mono">02 / PENDIDIKAN</div>
+            <h2 class="section-title">Belajar dengan<br>arah yang jelas.</h2>
+          </div>
+          <p class="section-intro">
+            Fondasi akademik saya menghubungkan ketelitian akuntansi,
+            keterampilan komputer, dan pemahaman dasar bisnis.
+          </p>
+        </div>
+
+        <div class="edu-layout">
+          <aside class="edu-side reveal">
+            <span class="mono">Indeks prestasi</span>
+            <strong class="big-number">3.54</strong>
+            <p>IP semester 2<br>Politeknik LP3I Pekanbaru</p>
+          </aside>
+
+          <div class="edu-list">
+            <article class="edu-item reveal">
+              <div class="edu-date mono">2025 — SEKARANG</div>
+              <div>
+                <h3>Politeknik LP3I Pekanbaru</h3>
+                <p class="degree">Komputerisasi Akuntansi · D2</p>
+                <p>
+                  Mempelajari prinsip dan praktik akuntansi, akuntansi biaya,
+                  Excel, perpajakan, sistem informasi akuntansi, serta
+                  pengelolaan data keuangan.
+                </p>
+              </div>
+            </article>
+
+            <article class="edu-item reveal">
+              <div class="edu-date mono">2022 — 2025</div>
+              <div>
+                <h3>SMA Negeri 1 Kampar Kiri Hilir</h3>
+                <p class="degree">Jurusan IPA · Kurikulum K13</p>
+                <p>
+                  Mengembangkan dasar akademik dan aktif dalam kegiatan
+                  organisasi sekolah, termasuk bidang prestasi akademik, seni,
+                  dan olahraga.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap experience" id="pengalaman">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-index mono">03 / PENGALAMAN</div>
+          <h2 class="section-title">Belajar memimpin<br>dengan bekerja.</h2>
+        </div>
+        <p class="section-intro">
+          Tanggung jawab organisasi menjadi ruang latihan untuk komunikasi,
+          dokumentasi, koordinasi, dan konsistensi menyelesaikan tugas.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-date mono">2026 — SEKARANG</div>
+          <div class="timeline-content">
+            <h3>Sekretaris Badan Eksekutif Mahasiswa</h3>
+            <p class="timeline-place">Politeknik LP3I Pekanbaru</p>
+            <ul>
+              <li>Mengelola administrasi dan dokumentasi kegiatan organisasi.</li>
+              <li>Menyusun surat, notulensi rapat, dan laporan kegiatan.</li>
+              <li>Membantu koordinasi antar divisi dan anggota.</li>
+              <li>Mengatur jadwal serta menjaga komunikasi internal.</li>
+            </ul>
+          </div>
+          <span class="timeline-mark" aria-hidden="true"><i class="fa-solid fa-thumbtack"></i></span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-date mono">2023 — 2024</div>
+          <div class="timeline-content">
+            <h3>Anggota OSIS — Bidang Prestasi</h3>
+            <p class="timeline-place">SMA Negeri 1 Kampar Kiri Hilir</p>
+            <ul>
+              <li>Mendukung program bidang akademik, seni, dan olahraga.</li>
+              <li>Berpartisipasi dalam penyelenggaraan kegiatan sekolah.</li>
+              <li>Membantu koordinasi acara dan kegiatan ekstrakurikuler.</li>
+              <li>Melatih kerja sama, komunikasi, dan kepemimpinan.</li>
+            </ul>
+          </div>
+          <span class="timeline-mark" aria-hidden="true"><i class="fa-solid fa-thumbtack"></i></span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-date mono">KEGIATAN</div>
+          <div class="timeline-content">
+            <h3>Peserta Pramuka Tingkat Kecamatan</h3>
+            <p class="timeline-place">Kegiatan kepramukaan</p>
+            <ul>
+              <li>Mengembangkan kedisiplinan dan kemandirian.</li>
+              <li>Melatih kerja sama tim dan tanggung jawab.</li>
+              <li>Berpartisipasi dalam kegiatan sosial dan pengembangan diri.</li>
+              <li>Meningkatkan kemampuan adaptasi dan pemecahan masalah.</li>
+            </ul>
+          </div>
+          <span class="timeline-mark" aria-hidden="true"><i class="fa-solid fa-thumbtack"></i></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills" id="keahlian">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-index mono">04 / KOMPETENSI</div>
+            <h2 class="section-title">Keterampilan yang<br>siap dipakai.</h2>
+          </div>
+          <p class="section-intro">
+            Kombinasi keterampilan teknis dan cara kerja yang mendukung peran
+            di bidang accounting, administrasi, dan perpajakan.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-num">01 — TEKNIS</span>
+            <h3>Accounting & data</h3>
+            <p>Dasar pengolahan informasi dan administrasi keuangan.</p>
+            <div class="tags">
+              <span class="tag">Excel</span>
+              <span class="tag">Word</span>
+              <span class="tag">PowerPoint</span>
+              <span class="tag">Laporan keuangan</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-num">02 — PERPAJAKAN</span>
+            <h3>Tax fundamentals</h3>
+            <p>Pemahaman dasar perpajakan dari pembelajaran akuntansi.</p>
+            <div class="tags">
+              <span class="tag">Perhitungan pajak</span>
+              <span class="tag">E-SPT</span>
+              <span class="tag">E-Faktur</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-num">03 — CARA KERJA</span>
+            <h3>Team & execution</h3>
+            <p>Terbiasa berkoordinasi, mengatur waktu, dan menuntaskan tugas.</p>
+            <div class="tags">
+              <span class="tag">Teamwork</span>
+              <span class="tag">Time management</span>
+              <span class="tag">Problem solving</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap contact" id="kontak">
+      <div class="contact-box reveal">
+        <div class="mono">05 / LANGKAH BERIKUTNYA</div>
+        <h2>Mari mulai dengan percakapan yang baik.</h2>
+        <p>
+          Saya terbuka untuk kesempatan magang maupun full-time di bidang
+          administrasi, accounting, dan perpajakan.
+        </p>
+
+        <div class="contact-links">
+          <a class="button button-dark" href="mailto:lestarikartika018@gmail.com">
+            lestarikartika018@gmail.com <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+          <a class="button button-light" href="https://instagram.com/kartikadvlstri" target="_blank" rel="noreferrer">
+            Instagram <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+          <a class="button button-light" href="https://wa.me/6285274060233" target="_blank" rel="noreferrer">
+            WhatsApp <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="year"></span> KARTIKA DEVI LESTARI</span>
+    <span>PEKANBARU, RIAU · DIBUAT DENGAN TELITI</span>
+  </footer>
+
+  <script>
+    // Tahun footer otomatis
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Toggle Mode Terang/Gelap
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      }
+    });
+
+    // Animasi elemen saat masuk ke layar
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+</body>
+
+</html>
+
+
+
